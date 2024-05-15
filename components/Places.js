@@ -4,7 +4,8 @@ const Places = ({ places }) => {
       {places &&
         places.data.map((place) => {
           const imageURL = place.attributes.Image.data.map((image) => {
-            return "http://localhost:1337".concat(image.attributes.url);
+            // return "http://localhost:1337".concat(image.attributes.url);
+            return "http://localhost:1337" + image.attributes.url;
           });
           return (
             <li
