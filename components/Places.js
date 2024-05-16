@@ -1,15 +1,14 @@
 const Places = ({ places }) => {
   return (
-    <ul className=" grid grid-cols-2 justify-center items-center py-2 px-16">
+    <ul className=" flex flex-wrap justify-center items-center py-2 px-16">
       {places &&
         places.data.map((place) => {
           const imageURL = place.attributes.Image.data.map((image) => {
-            // return "http://localhost:1337".concat(image.attributes.url);
             return "http://localhost:1337" + image.attributes.url;
           });
           return (
             <li
-              className="bg-slate-50 w-auto m-3 p-5 rounded-lg"
+              className="bg-slate-50 max-w-[400px] w-auto m-4 p-3 rounded-lg"
               key={place.id}
             >
               <img src={imageURL} />

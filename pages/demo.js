@@ -1,9 +1,11 @@
 import Places from "@/components/Places";
+import Slider from "@/components/Slider";
 import { fetcher } from "@/lib/api";
 
 const placesList = ({ places }) => {
   return (
-    <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+    <div className="bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-500">
+      <Slider places={places} />
       <Places places={places} />
     </div>
   );
