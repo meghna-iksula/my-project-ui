@@ -33,7 +33,7 @@ const Slider = ({ places }) => {
           });
           return (
             <SwiperSlide key={place.id}>
-              <div className="flex flex-col gap-4 mb-20 group relative shadow-lg text-white px-6 py-8 h-[300px] max-w-[350px] overflow-hidden cursor-pointer bg-white rounded-md">
+              <div className="flex flex-col gap-4 mb-20 group relative shadow-lg text-white px-6 py-8 h-[310px] max-w-[350px] overflow-hidden cursor-pointer bg-white rounded-md">
                 <div
                   className="absolute m-3 inset-0 bg-cover bg-no-repeat bg-center"
                   style={{
