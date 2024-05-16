@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
-
-import { FreeMode, Pagination } from "swiper/modules";
+import "swiper/css/autoplay";
 
 const Slider = ({ places }) => {
   return (
@@ -21,10 +21,11 @@ const Slider = ({ places }) => {
           },
         }}
         freeMode={true}
+        autoplay={{ delay: 2500 }}
         pagination={{
           clickable: true,
         }}
-        modules={[FreeMode, Pagination]}
+        modules={[FreeMode, Pagination, Autoplay]}
         className="max-w-[85%] my-24"
       >
         {places.data.map((place) => {
