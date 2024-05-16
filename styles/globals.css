@@ -31,3 +31,9 @@ body {
     text-wrap: balance;
   }
 }
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+  width: 10px !important;
+  height: 10px !important;
+}
