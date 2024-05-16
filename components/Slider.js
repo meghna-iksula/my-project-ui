@@ -1,14 +1,15 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination, Autoplay } from "swiper/modules";
+import { FreeMode, Pagination, Autoplay, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import "swiper/css/autoplay";
+import "swiper/css/navigation";
 
 const Slider = ({ places }) => {
   return (
-    <div className="flex items-center w-full mx-auto justify-center flex-col">
+    <div className="flex items-center w-[85%] mx-auto justify-center flex-col">
       <Swiper
         breakpoints={{
           340: {
@@ -22,11 +23,12 @@ const Slider = ({ places }) => {
         }}
         freeMode={true}
         autoplay={{ delay: 2500 }}
+        navigation
         pagination={{
           clickable: true,
         }}
-        modules={[FreeMode, Pagination, Autoplay]}
-        className="max-w-[85%] my-24"
+        modules={[FreeMode, Pagination, Autoplay, Navigation]}
+        className="w-full my-24"
       >
         {places.data.map((place) => {
           const imageURL = place.attributes.Image.data.map((image) => {
