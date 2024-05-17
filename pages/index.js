@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import PlacesList from "@/components/PlacesList";
-import { fetcher } from "@/lib/api";
 
 const Home = ({ places }) => {
   return (
@@ -13,10 +12,10 @@ const Home = ({ places }) => {
 
 export default Home;
 
-export async function getStaticProps() {
-  const placesResponse = await fetcher(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/places?populate=*`
-  );
+export async function getServerSideProps() {
+  let response = await fetch("http://localhost:1337/api/places?populate=*");
+
+  const placesResponse = await response.json();
   console.log(placesResponse);
   return {
     props: {
